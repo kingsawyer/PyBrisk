@@ -4,7 +4,7 @@ import time
 import argparse
 
 TEAM_NAME = 'Tasty Canned Meat'
-_TOKEN = ''
+
 
 class BriskPlayer():
     def await_turn_and_get_status(self, game):
@@ -14,7 +14,6 @@ class BriskPlayer():
             if status['current_turn'] or status['eliminated'] or status['winner']:
                 return status
             time.sleep(0.25)
-
 
     def run(self, game_num=None):
 
